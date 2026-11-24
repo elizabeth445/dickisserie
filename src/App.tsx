@@ -10,9 +10,7 @@ import { CartDrawer } from "./components/CartDrawer";
 import { useCart, MAX_QUANTITY } from "./hooks/useCart";
 import { type Category, type Product } from "./data/products";
 import { Icon } from "./components/Icon";
-const ReviewTools = import.meta.env.DEV
-  ? lazy(() => import("./components/ReviewTools"))
-  : null;
+const ReviewTools = lazy(() => import("./components/ReviewTools"));
 type Panel =
   | { type: "product"; product: Product }
   | { type: "cart" }
@@ -138,11 +136,9 @@ export default function App() {
           </>
         ) : null}
       </div>
-      {ReviewTools ? (
-        <Suspense fallback={null}>
-          <ReviewTools />
-        </Suspense>
-      ) : null}
+      <Suspense fallback={null}>
+        <ReviewTools />
+      </Suspense>
     </>
   );
 }

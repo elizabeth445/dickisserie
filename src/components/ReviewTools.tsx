@@ -1,6 +1,9 @@
-import { useEffect, useState, useSyncExternalStore } from "react";
-import { Agentation } from "agentation";
+import { lazy, Suspense, useEffect, useState, useSyncExternalStore } from "react";
 import "../styles/review-tools.css";
+
+const Agentation = lazy(() =>
+  import("agentation").then((module) => ({ default: module.Agentation })),
+);
 
 const desktopQuery = "(hover: hover) and (pointer: fine)";
 function subscribeDesktop(listener: () => void) {
@@ -50,11 +53,13 @@ export default function ReviewTools() {
 
   if (!desktop || !canStore) return null;
   return (
-    <Agentation
-      appName="DICKISSERIE"
-      className="dickisserie-review-toolbar"
-      enableKeyboardShortcuts={false}
-      portalContainer={container}
-    />
+    <Suspense fallback={null}>
+      <Agentation
+        appName="DICKISSERIE"
+        className="dickisserie-review-toolbar"
+        enableKeyboardShortcuts={false}
+        portalContainer={container}
+      />
+    </Suspense>
   );
 }
