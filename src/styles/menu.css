@@ -279,6 +279,8 @@
   }
   .section-heading h2 {
     max-width: 7em;
+    margin-inline: auto;
+    text-align: center;
   }
   .category-tabs {
     justify-content: center;

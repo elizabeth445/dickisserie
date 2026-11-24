@@ -4,6 +4,13 @@ test("loads the supplied 4K master on desktop and Full HD on smaller screens", a
   page,
 }) => {
   await page.emulateMedia({ reducedMotion: "no-preference" });
+  // Quality selection must not depend on Chrome's learned network estimate.
+  await page.addInitScript(() => {
+    Object.defineProperty(navigator, "connection", {
+      configurable: true,
+      value: { effectiveType: "4g", saveData: false },
+    });
+  });
   await page.goto("/");
   const expectedWidth = page.viewportSize()!.width > 1100 ? 3840 : 1920;
   await expect
