@@ -281,9 +281,12 @@
     max-width: 7em;
   }
   .category-tabs {
-    gap: 7px;
+    justify-content: center;
+    gap: 8px;
   }
   .category-tabs button {
+    flex: 0 0 calc((100% - 8px) / 2);
+    min-width: 0;
     font-size: 13px;
     padding: 10px 14px;
   }
@@ -298,6 +301,8 @@
   }
   .featured-caption {
     order: -1;
+    justify-content: center;
+    text-align: center;
     padding: 0 0 16px;
     min-height: 72px;
   }
