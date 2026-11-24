@@ -1,0 +1,17 @@
+node_modules/
+dist/
+.env*
+!.env.example
+*.log
+*.tsbuildinfo
+playwright-report/
+test-results/
+output/
+screenshots/
+references/
+backups/
+.vercel/
+.agents/
+.codex/
+.cache/
+.DS_Store

@@ -1,0 +1,320 @@
+.hero {
+  position: relative;
+  /* Keep the wordmark above the glass even on wide, short desktop screens. */
+  min-height: max(880px, calc(56.25vw + 30px));
+  height: 100svh;
+  max-height: 1160px;
+  background: var(--color-background);
+  color: var(--color-ivory);
+  isolation: isolate;
+  overflow: clip;
+}
+.hero-artwork {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  transform-origin: 60% 70%;
+  z-index: 0;
+}
+.hero-photograph {
+  position: absolute;
+  inset: auto 0 0;
+  height: 184%;
+  display: block;
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to bottom,
+    #000 calc(100% - 144px),
+    #000e calc(100% - 96px),
+    #0006 calc(100% - 40px),
+    transparent
+  );
+  transform-origin: 100% 100%;
+}
+.hero-photograph img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  max-width: none;
+  object-fit: cover;
+  object-position: right bottom;
+}
+.hero-scene-motion {
+  position: absolute;
+  inset: 0;
+}
+.hero-still {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.hero-video {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 50%;
+  object-fit: cover;
+  object-position: right bottom;
+  mask-image: linear-gradient(to bottom, transparent, #000 64px);
+  opacity: 1;
+  transition: opacity 350ms ease-out;
+}
+.hero-video.is-finished {
+  opacity: 0;
+}
+.hero-motion-control {
+  position: absolute;
+  bottom: max(24px, calc(100% - 100svh + 24px));
+  right: 24px;
+  z-index: 3;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid rgb(247 235 221 / 50%);
+  background: rgb(0 18 11 / 75%);
+  color: var(--color-ivory);
+  pointer-events: auto;
+}
+.hero-motion-control:hover {
+  background: var(--color-green-secondary);
+}
+.hero-motion-control svg {
+  width: 20px;
+  height: 20px;
+}
+.hero-layout {
+  position: relative;
+  pointer-events: none;
+  z-index: 2;
+  height: 100%;
+  padding-top: 112px;
+  padding-bottom: 52px;
+}
+.hero-copy {
+  width: 100%;
+  pointer-events: none;
+}
+.hero-copy a {
+  pointer-events: auto;
+}
+.masthead {
+  font-family: var(--font-brand);
+  font-size: clamp(100px, 11.7vw, 214px);
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+  white-space: nowrap;
+  overflow: hidden;
+  padding-block: 0 12px;
+  width: max-content;
+  max-width: 100%;
+}
+.masthead > span {
+  display: inline-block;
+}
+.hero-copy h2 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(48px, 4.6vw, 76px);
+  line-height: 0.99;
+  letter-spacing: -0.035em;
+  margin-top: 10px;
+  max-width: 5.6em;
+}
+.hero-copy h2 > span,
+.hero-copy h2 > em {
+  display: block;
+}
+.hero-copy h2 > em {
+  font-weight: 500;
+  color: var(--color-accent);
+  margin-top: 5px;
+}
+.hero-copy > p {
+  font-size: 16px;
+  line-height: 1.55;
+  max-width: 390px;
+  margin-top: 28px;
+  color: var(--color-text-secondary);
+}
+.hero-cta {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  margin-top: 30px;
+}
+.hero-cta > .button {
+  min-height: 54px;
+  padding-inline: 30px;
+}
+.hero-cta > .text-link {
+  font-size: 15px;
+}
+@media (min-width: 1700px) {
+  .hero-copy h2 {
+    margin-top: 20px;
+    font-size: 78px;
+  }
+  .hero-copy > p {
+    font-size: 17px;
+  }
+}
+@media (max-width: 1100px) and (min-width: 701px) {
+  .hero {
+    min-height: 760px;
+    height: 100svh;
+  }
+  .hero-layout {
+    padding-top: 122px;
+  }
+  .masthead {
+    font-size: 12.8vw;
+  }
+  .hero-copy h2 {
+    font-size: clamp(44px, 5.4vw, 58px);
+    max-width: 5.5em;
+  }
+  .hero-copy > p {
+    max-width: 300px;
+    font-size: 15px;
+    margin-top: 24px;
+  }
+  .hero-cta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    margin-top: 24px;
+  }
+  .hero-photograph {
+    height: 176%;
+  }
+}
+@media (max-width: 1100px) {
+  .hero {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    height: auto;
+    max-height: none;
+    padding-top: 82px;
+    overflow: clip;
+  }
+  .hero-layout {
+    display: contents;
+  }
+  .hero-copy {
+    display: contents;
+  }
+  .masthead {
+    order: 1;
+    position: relative;
+    z-index: 2;
+    font-size: 15vw;
+    letter-spacing: -0.04em;
+    line-height: 1.12;
+    padding: 16px 0 10px;
+    margin-inline: var(--gutter);
+    width: calc(100% - var(--gutter) * 2);
+    max-width: none;
+  }
+  .hero-copy h2 {
+    order: 2;
+    position: relative;
+    z-index: 2;
+    font-size: clamp(33px, 9.6vw, 44px);
+    display: grid;
+    grid-template-columns: 1fr 1.08fr;
+    gap: 12px;
+    line-height: 1.03;
+    max-width: none;
+    margin: 18px var(--gutter) 0;
+  }
+  .hero-copy h2 > em {
+    margin-top: 0;
+  }
+  .hero-copy > p {
+    display: none;
+  }
+  .hero-artwork {
+    order: 3;
+    position: relative;
+    inset: auto;
+    height: clamp(280px, 87.2vw, 340px);
+    width: 100%;
+    margin-top: 12px;
+    z-index: 0;
+  }
+  .hero-photograph {
+    inset: auto 0 0;
+    height: 200%;
+    mask-image: linear-gradient(
+      to bottom,
+      #000 calc(100% - 64px),
+      #000d calc(100% - 40px),
+      #0005 calc(100% - 16px),
+      transparent
+    );
+  }
+  .hero-photograph img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: 83% bottom;
+    right: auto;
+    bottom: 0;
+  }
+  .hero-video {
+    object-position: 83% bottom;
+    mask-image: linear-gradient(to bottom, transparent, #000 32px);
+  }
+  .hero-motion-control {
+    bottom: 14px;
+  }
+  .hero-cta {
+    order: 4;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin: 8px var(--gutter) 0;
+    gap: 6px;
+    padding-bottom: 28px;
+  }
+  .hero-cta > .button {
+    min-height: 52px;
+  }
+  .hero-cta > .text-link {
+    align-self: center;
+    min-height: 44px;
+  }
+  .hero-copy a {
+    pointer-events: auto;
+  }
+}
+@media (min-width: 701px) and (max-width: 1100px) {
+  .hero {
+    padding-top: 110px;
+  }
+  .hero-artwork {
+    height: 56.25vw;
+  }
+}
+@media (max-width: 350px) {
+  .hero-copy h2 {
+    font-size: 33px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-artwork,
+  .hero-photograph,
+  .hero-scene-motion {
+    transform: none !important;
+  }
+}

@@ -1,0 +1,16 @@
+/* Reserve the lower-right corner for replay; keep the editor beside it. */
+@media (min-width: 1101px) {
+  .dickisserie-review-toolbar {
+    right: 88px;
+    bottom: 24px;
+  }
+}
+/* Decorative pointer pass-through must not prevent picking text or the scene. */
+body:has([data-agentation-portal]) .hero-copy :is(h1, h2, p),
+body:has([data-agentation-portal]) .hero-photograph :is(img, video) {
+  pointer-events: auto;
+}
+body:has([data-agentation-portal]) .masthead > span,
+body:has([data-agentation-portal]) .hero-video.is-finished {
+  pointer-events: none;
+}
