@@ -69,6 +69,9 @@ export function AboutSection() {
           <em>{content.bar.title.split("\n")[1]}</em>
         </h2>
         <p>{content.bar.text}</p>
+        {content.bar.story.map((paragraph) => (
+          <p key={paragraph}>{paragraph}</p>
+        ))}
         <a className="text-link" href="#visit">
           Plan your visit
         </a>

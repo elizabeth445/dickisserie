@@ -13,6 +13,10 @@ export const content = {
   bar: {
     title: "A little naughty\nA lot of pleasure",
     text: "Come for the waffles — stay for a cocktail — make a night of it",
+    story: [
+      "DICKISSERIE brings a playful spirit to Vilnius — freshly baked waffles in provocative shapes, presented with elegance and a little wink",
+      "Like a witty friend, we’re confident, playful and unapologetic — a little bold, always tasteful, and guided by one philosophy: 100% gourmet, 0% taboo",
+    ],
   },
   visit: {
     title: "Meet you\nat the bar",
