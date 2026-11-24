@@ -2,21 +2,20 @@ export const content = {
   brand: "DICKISSERIE",
   descriptor: "Adult waffle bar & cocktail bar",
   hero: {
-    first: "Naughty Waffles.",
-    second: "Serious Cocktails.",
-    line: "Artful adult waffles. Cocktails with character.",
+    first: "Naughty Waffles",
+    second: "Serious Cocktails",
+    line: "Artful adult waffles — cocktails with character",
     cta: "Explore the menu",
   },
   menu: {
     title: "Pick your pleasure",
   },
   bar: {
-    title: "A little naughty.\nA lot of pleasure.",
-    text: "Come for the waffles. Stay for a cocktail. Make a night of it.",
-    caption: "A glimpse of the DICKISSERIE interior concept.",
+    title: "A little naughty\nA lot of pleasure",
+    text: "Come for the waffles — stay for a cocktail — make a night of it",
   },
   visit: {
-    title: "Meet you\nat the bar.",
+    title: "Meet you\nat the bar",
     location: "Vilnius Old Town",
     address: "Traky, 2, Vilnius, Lithuania",
     instagram: "https://www.instagram.com/dickisserie?evlk=ZTJkdmNvYWNvNzYy",
@@ -24,5 +23,5 @@ export const content = {
     mapsEmbed:
       "https://maps.google.com/maps?q=Trak%C5%B3%20g.%202%2C%20Vilnius%2C%20Lithuania&hl=en&z=17&output=embed",
   },
-  demo: "Demo only. No payment is taken and no order is sent to the bar.",
+  demo: "Demo only — no payment is taken and no order is sent to the bar",
 };

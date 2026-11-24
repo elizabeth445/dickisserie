@@ -22,8 +22,8 @@ export function ProductDetails({
         <p className="detail-contents">{product.contents}</p>
         <p>{product.description}</p>
         <p className="small-note">
-          Decoration shown is illustrative. Ask the bar about ingredients and
-          allergens before ordering.
+          Decoration shown is illustrative — ask the bar about ingredients and
+          allergens before ordering
         </p>
         <div className="detail-order">
           <Quantity
@@ -42,7 +42,7 @@ export function ProductDetails({
           Add to bag · {money(product.price * quantity)}
         </button>
         <p className="small-note">
-          Reference menu price. Availability is confirmed at the bar.
+          Reference menu price — availability is confirmed at the bar
         </p>
       </div>
     </div>

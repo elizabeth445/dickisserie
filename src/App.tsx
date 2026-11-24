@@ -32,8 +32,8 @@ export default function App() {
     if (added > 0) cart.add(product.id, added);
     setFeedback(
       added > 0
-        ? `${added === 1 ? product.name : `${added} × ${product.name}`} added to your bag.`
-        : `Your bag already holds the limit of ${MAX_QUANTITY} for this item.`,
+        ? `${added === 1 ? product.name : `${added} × ${product.name}`} added to your bag`
+        : `Your bag already holds the limit of ${MAX_QUANTITY} for this item`,
     );
     clearTimeout(timer.current);
     timer.current = setTimeout(() => setFeedback(""), 4000);
@@ -78,7 +78,7 @@ export default function App() {
               ? panel.product.name
               : panel.type === "cart"
                 ? "Your bag"
-                : "Come on in."
+                : "Come on in"
           }
           variant={
             panel.type === "product"

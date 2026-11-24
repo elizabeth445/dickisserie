@@ -852,6 +852,9 @@ button:active,
 .bar-editorial h2 em {
   font-weight: 400;
   color: var(--color-blush);
+  display: block;
+  font-size: inherit;
+  white-space: nowrap;
 }
 .bar-editorial > p {
   font-size: 16px;
@@ -879,13 +882,6 @@ button:active,
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-.bar-collage > figcaption {
-  margin-top: 16px;
-  font-size: 13px;
-  line-height: 1.6;
-  color: var(--color-text-muted);
-  max-width: 35em;
 }
 .visit-section {
   background: var(--color-green-secondary);
@@ -971,7 +967,7 @@ button:active,
     padding-top: 0;
   }
   .bar-editorial h2 {
-    font-size: 54px;
+    font-size: clamp(40px, 5.4vw, 54px);
   }
 }
 @media (max-width: 700px) {
@@ -981,13 +977,17 @@ button:active,
     grid-template-columns: 1fr;
     gap: 32px;
   }
-  .bar-editorial h2 br:last-child {
-    display: none;
+  .bar-editorial {
+    text-align: center;
+  }
+  .bar-editorial h2 em {
+    font-size: inherit;
   }
   .bar-editorial > p {
     font-size: 16px;
     max-width: 280px;
     margin-top: 24px;
+    margin-inline: auto;
   }
   .bar-editorial > .text-link {
     margin-top: 12px;
@@ -1004,6 +1004,17 @@ button:active,
   }
   .visit-info address {
     font-size: 20px;
+  }
+  .visit-info {
+    text-align: center;
+  }
+  .visit-links {
+    flex-direction: column-reverse;
+    justify-content: center;
+    gap: 16px;
+  }
+  .visit-links > .button {
+    width: min(100%, 240px);
   }
   .visit-info address > span + span {
     font-size: 14px;
@@ -1033,15 +1044,6 @@ button:active,
 }
 a:active {
   opacity: 0.72;
-}
-.bar-editorial h2 em {
-  display: block;
-  max-width: 5.9em;
-}
-@media (max-width: 700px) {
-  .bar-editorial h2 em {
-    max-width: none;
-  }
 }
 .brand > span {
   display: block;

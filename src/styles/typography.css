@@ -46,18 +46,13 @@ h3 {
 .bar-editorial h2 {
   font-size: clamp(44px, 5.1vw, 76px);
 }
-.site-footer > p,
-.bar-collage > figcaption {
+.site-footer > p {
   font-size: 13px;
 }
 .detail-image picture {
   display: block;
   width: 100%;
   height: 100%;
-}
-.row-mark .icon {
-  width: 18px;
-  height: 18px;
 }
 .detail-image.mini-waffles img {
   max-width: 164px;

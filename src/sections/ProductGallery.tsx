@@ -120,9 +120,6 @@ export function ProductGallery({
                   <small>{product.contents}</small>
                 </span>
                 <span className="row-price">{money(product.price)}</span>
-                <span className="row-mark" aria-hidden="true">
-                  {active.id === product.id ? <Icon name="check" /> : null}
-                </span>
               </button>
             ))}
           </div>

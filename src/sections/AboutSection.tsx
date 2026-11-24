@@ -62,7 +62,6 @@ export function AboutSection() {
             />
           </div>
         </div>
-        <figcaption>{content.bar.caption}</figcaption>
       </figure>
       <div className="bar-editorial">
         <h2 id="bar-heading">

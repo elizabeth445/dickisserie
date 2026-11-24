@@ -58,7 +58,7 @@ export function VisitSection() {
         <a href="#home" className="footer-wordmark">
           {content.brand}
         </a>
-        <p>100% Gourmet. 0% Taboo.</p>
+        <p>100% Gourmet · 0% Taboo</p>
         <a className="text-link" href="#menu">
           Back to the menu
         </a>

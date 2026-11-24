@@ -26,7 +26,7 @@ export const products: Product[] = [
     categories: ["dick", "gift"],
     contents: "3 full-size Dick Waffles",
     description:
-      "A box made for sharing. Three signature waffle shapes, beautifully dressed and ready to make an impression.",
+      "A box made for sharing — Three signature waffle shapes, beautifully dressed and ready to make an impression",
     availability: "reference",
   },
   {
@@ -37,7 +37,7 @@ export const products: Product[] = [
     categories: ["pussy", "gift"],
     contents: "3 full-size Pussy Waffles",
     description:
-      "Three of our unmistakable Pussy Waffles, together in one box. A playful little gift to share.",
+      "Three of our unmistakable Pussy Waffles, together in one box — A playful little gift to share",
     availability: "reference",
   },
   {
@@ -48,7 +48,7 @@ export const products: Product[] = [
     categories: ["dick", "mini", "gift"],
     contents: "2 Dick Waffles + 3 Mini Dick Waffles",
     description:
-      "Big personalities. Little pleasures. A mixed box of full-size and mini Dick Waffles.",
+      "Big personalities — Little pleasures — A mixed box of full-size and mini Dick Waffles",
     availability: "reference",
   },
   {
@@ -59,7 +59,7 @@ export const products: Product[] = [
     categories: ["pussy", "mini", "gift"],
     contents: "2 Pussy Waffles + 3 Mini Pussy Waffles",
     description:
-      "The Pussy Waffle mixed-box option from the supplied menu. The photograph shows the full-size shape; the mixed-box photograph is unavailable.",
+      "The Pussy Waffle mixed-box option from the supplied menu — The photograph shows the full-size shape; the mixed-box photograph is unavailable",
     availability: "reference",
   },
   {
@@ -71,7 +71,7 @@ export const products: Product[] = [
     categories: ["dick", "mini"],
     contents: "9 mini waffles",
     description:
-      "Nine bite-size versions of the signature Dick Waffle. A small box with plenty of personality.",
+      "Nine bite-size versions of the signature Dick Waffle — A small box with plenty of personality",
     availability: "reference",
   },
   {
@@ -82,7 +82,7 @@ export const products: Product[] = [
     categories: ["dick"],
     contents: "1 individually packed Dick Waffle",
     description:
-      "A single signature waffle, individually packed. One little pleasure to take with you.",
+      "A single signature waffle, individually packed — One little pleasure to take with you",
     availability: "reference",
   },
 ];

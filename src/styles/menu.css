@@ -147,12 +147,6 @@
   font-variant-numeric: tabular-nums;
   white-space: nowrap;
 }
-.row-mark {
-  width: 22px;
-  flex: none;
-  font-family: var(--font-body);
-  font-size: 18px;
-}
 .product-row.selected {
   background: var(--color-green-secondary);
   border-left-color: var(--color-blush);

@@ -13,7 +13,7 @@ test("menu filtering, details, quantities, persistence, removal and complete dem
   await ready(page);
   await page.getByRole("button", { name: "Your bag 0 items" }).click();
   await expect(
-    page.getByText("Your bag is empty.", { exact: false }),
+    page.getByText("Your bag is empty", { exact: false }),
   ).toBeVisible();
   await page.getByRole("button", { name: "Close panel" }).click();
   await page
@@ -49,7 +49,7 @@ test("menu filtering, details, quantities, persistence, removal and complete dem
     .click();
   await page.getByRole("button", { name: "Remove Mini Dick Waffles" }).click();
   await expect(
-    page.getByText("Your bag is empty.", { exact: false }),
+    page.getByText("Your bag is empty", { exact: false }),
   ).toBeVisible();
   await page.getByRole("button", { name: "Close panel" }).click();
   await page
@@ -68,11 +68,11 @@ test("menu filtering, details, quantities, persistence, removal and complete dem
   await page.getByLabel("Choose a demo pickup window").selectOption("30min");
   await expect(
     page.getByText(
-      "Demo only. No payment is taken and no order is sent to the bar.",
+      "Demo only — no payment is taken and no order is sent to the bar",
     ),
   ).toBeVisible();
   await page.getByRole("button", { name: "Confirm demo order · €17" }).click();
-  await expect(page.getByText("Your demo order is complete.")).toBeVisible();
+  await expect(page.getByText("Your demo order is complete")).toBeVisible();
   await expect(page.locator(".order-reference")).toContainText(
     /DCK-[A-F0-9]{6}/,
   );
@@ -311,7 +311,7 @@ test("unavailable local storage leaves the bag usable and explains persistence f
     .click();
   await page.getByRole("button", { name: "Your bag 1 item" }).click();
   await expect(
-    page.getByText("Your browser could not save the bag.", { exact: false }),
+    page.getByText("Your browser could not save the bag", { exact: false }),
   ).toBeVisible();
   await expect(page.locator(".cart-summary strong")).toHaveText("€17");
 });

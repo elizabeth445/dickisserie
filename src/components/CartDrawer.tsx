@@ -32,9 +32,9 @@ export function CartDrawer({
         <h3>
           A sweet little
           <br />
-          <em>test run.</em>
+          <em>test run</em>
         </h3>
-        <p>Your demo order is complete.</p>
+        <p>Your demo order is complete</p>
         <p className="order-reference">
           {orderId}
           <span>{money(orderTotal)}</span>
@@ -52,9 +52,9 @@ export function CartDrawer({
         <h3>
           Room for
           <br />
-          <em>temptation.</em>
+          <em>temptation</em>
         </h3>
-        <p>Your bag is empty. Pick a little pleasure from the menu.</p>
+        <p>Your bag is empty — pick a little pleasure from the menu</p>
         <button
           className="button primary"
           onClick={() => {
@@ -73,7 +73,7 @@ export function CartDrawer({
           <button className="text-link" onClick={() => setStep("bag")}>
             Back to your bag
           </button>
-          <h3>One last look.</h3>
+          <h3>One last look</h3>
         </div>
       ) : null}
       <div className="cart-items">
@@ -127,8 +127,8 @@ export function CartDrawer({
         </p>
         {cart.storageError ? (
           <p className="small-note" role="status">
-            Your browser could not save the bag. Keep this page open to retain
-            your selection.
+            Your browser could not save the bag — keep this page open to retain
+            your selection
           </p>
         ) : null}
         {step === "review" ? (
