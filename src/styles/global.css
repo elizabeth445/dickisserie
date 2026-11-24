@@ -857,9 +857,9 @@ button:active,
   white-space: nowrap;
 }
 .bar-editorial > p {
-  font-size: clamp(20px, 1.6vw, 24px);
+  font-size: clamp(16px, 1.2vw, 18px);
   line-height: 1.55;
-  max-width: 36ch;
+  max-width: 44ch;
   text-wrap: balance;
   margin-top: 28px;
   color: var(--color-text-muted);
@@ -1000,8 +1000,8 @@ button:active,
     font-size: inherit;
   }
   .bar-editorial > p {
-    font-size: 18px;
-    max-width: 30ch;
+    font-size: 16px;
+    max-width: 34ch;
     margin-top: 24px;
     margin-inline: auto;
   }
