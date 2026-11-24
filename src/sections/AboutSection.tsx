@@ -68,7 +68,7 @@ export function AboutSection() {
           {content.bar.title.split("\n")[0]}
           <em>{content.bar.title.split("\n")[1]}</em>
         </h2>
-        <p>{content.bar.text}</p>
+        <p className="bar-intro">{content.bar.text}</p>
         {content.bar.story.map((paragraph) => (
           <p key={paragraph}>{paragraph}</p>
         ))}

@@ -1005,6 +1005,15 @@ button:active,
     margin-top: 24px;
     margin-inline: auto;
   }
+  .bar-editorial > p + p {
+    text-wrap: balance;
+  }
+  .bar-editorial > .bar-intro {
+    display: none;
+  }
+  .bar-editorial > .bar-intro + p {
+    margin-top: 24px;
+  }
   .bar-editorial > .text-link {
     margin-top: 12px;
   }
